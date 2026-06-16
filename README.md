@@ -11,11 +11,11 @@
 
 ## 📁 Project Setup
 
-### 1. **Clone the repository:**
+1. **Clone the repository:**
 
-      ```bash
+    ```bash
       git clone https://github.com/Einstien749/movieDashboard.git
-      ```
+    ```
 
 2.  **Navigate to the project directory:**
     ```bash
