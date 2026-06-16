@@ -16,7 +16,7 @@ export const Search = ({ movies } : ISearchType) => {
   const [rating, setRating] = useState<number | string>(0);
   const handleFilterByYear = (text: any) => {
     if (movies?.length) {
-      const result = movies?.filter((movie) =>
+      const result = movies?.filter((movie : Movie) =>
         movie?.release_date?.includes(String(text))
       );
       console.log(result, "result", text);
@@ -26,7 +26,7 @@ export const Search = ({ movies } : ISearchType) => {
   const handleFilterByRating = (text: number | string) => {
     if (movies?.length) {
       const result = movies?.filter(
-        (movie) => Number(Number(movie?.vote_average).toFixed(1)) > Number(text)
+        (movie : Movie) => Number(Number(movie?.vote_average).toFixed(1)) > Number(text)
       );
       console.log(result, "result", text);
       setSearchResult(result);
@@ -41,7 +41,7 @@ export const Search = ({ movies } : ISearchType) => {
   };
   const handleFilterByTitle = (text: string) => {
     if (movies?.length) {
-      const result = movies.filter((movie) =>
+      const result = movies.filter((movie : Movie) =>
         movie.title.toLowerCase().includes(text.toLowerCase())
       );
       console.log(result, "result", text);
